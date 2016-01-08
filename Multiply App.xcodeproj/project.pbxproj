@@ -13,6 +13,7 @@
 		3F3C7CAC1BA332E200C90D5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C7CAB1BA332E200C90D5E /* Images.xcassets */; };
 		3F3C7CAF1BA332E200C90D5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C7CAD1BA332E200C90D5E /* LaunchScreen.xib */; };
 		3F3C7CBB1BA332E300C90D5E /* Multiply_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C7CBA1BA332E300C90D5E /* Multiply_AppTests.swift */; };
+		3F3C7CC51BA74A4100C90D5E /* Funny_or_Die_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C7CC41BA74A4100C90D5E /* Funny_or_Die_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		3F3C7CB41BA332E300C90D5E /* Multiply AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Multiply AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3C7CB91BA332E300C90D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3C7CBA1BA332E300C90D5E /* Multiply_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiply_AppTests.swift; sourceTree = "<group>"; };
+		3F3C7CC41BA74A4100C90D5E /* Funny_or_Die_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Funny_or_Die_logo.png; path = ../../../../Downloads/Funny_or_Die_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		3F3C7C961BA332E200C90D5E = {
 			isa = PBXGroup;
 			children = (
+				3F3C7CC41BA74A4100C90D5E /* Funny_or_Die_logo.png */,
 				3F3C7CA11BA332E200C90D5E /* Multiply App */,
 				3F3C7CB71BA332E300C90D5E /* Multiply AppTests */,
 				3F3C7CA01BA332E200C90D5E /* Products */,
@@ -156,6 +159,7 @@
 		3F3C7C971BA332E200C90D5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = VMassarelli;
 				TargetAttributes = {
@@ -193,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3C7CAA1BA332E200C90D5E /* Main.storyboard in Resources */,
+				3F3C7CC51BA74A4100C90D5E /* Funny_or_Die_logo.png in Resources */,
 				3F3C7CAF1BA332E200C90D5E /* LaunchScreen.xib in Resources */,
 				3F3C7CAC1BA332E200C90D5E /* Images.xcassets in Resources */,
 			);
@@ -411,6 +416,7 @@
 				3F3C7CC01BA332E300C90D5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F3C7CC11BA332E300C90D5E /* Build configuration list for PBXNativeTarget "Multiply AppTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +425,7 @@
 				3F3C7CC31BA332E300C90D5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

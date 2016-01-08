@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Multiply_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-5m-3RJ">
+                                <rect key="frame" x="195" y="105" width="195" height="126"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JPO-Ku-dQV">
+                                <rect key="frame" x="180" y="376" width="240" height="128"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-88-U9K">
+                                <rect key="frame" x="110" y="286" width="381" height="29"/>
+                                <segments>
+                                    <segment title="Subtraction"/>
+                                    <segment title="Addition"/>
+                                    <segment title="Multiplication"/>
+                                    <segment title="Division"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="nkO-yT-xmZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFu-xL-l6b">
+                                <rect key="frame" x="244" y="329" width="113" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHx-xc-gqX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Gf-pO-4Lh">
+                                <rect key="frame" x="110" y="230" width="110" height="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bIf-lY-e6i"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP5-96-Zjj">
+                                <rect key="frame" x="228" y="198" width="145" height="66"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Italic" family="Baskerville" pointSize="58"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-Os-z45">
+                                <rect key="frame" x="381" y="230" width="110" height="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GBk-pm-XHG"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FFu-xL-l6b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4f5-wD-3hf"/>
+                            <constraint firstAttribute="centerX" secondItem="JPO-Ku-dQV" secondAttribute="centerX" id="81Y-vK-KHV"/>
+                            <constraint firstItem="qiz-Os-z45" firstAttribute="leading" secondItem="kP5-96-Zjj" secondAttribute="trailing" constant="15" id="FRc-YY-BBb"/>
+                            <constraint firstAttribute="centerX" secondItem="kP5-96-Zjj" secondAttribute="centerX" id="HME-u3-9PO"/>
+                            <constraint firstItem="kP5-96-Zjj" firstAttribute="leading" secondItem="3Gf-pO-4Lh" secondAttribute="trailing" constant="15" id="XVo-TG-ZXF"/>
+                            <constraint firstAttribute="centerX" secondItem="hnh-88-U9K" secondAttribute="centerX" id="YGs-HG-hsY"/>
+                            <constraint firstAttribute="centerX" secondItem="dTY-5m-3RJ" secondAttribute="centerX" id="nrz-BC-D6F"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ImageView" destination="JPO-Ku-dQV" id="YfH-of-O9A"/>
+                        <outlet property="SegmentController" destination="hnh-88-U9K" id="dT5-qt-TuH"/>
+                        <outlet property="labelAnswer" destination="dTY-5m-3RJ" id="O8u-P7-yFg"/>
+                        <outlet property="labelSign" destination="kP5-96-Zjj" id="EAv-Fb-mNG"/>
+                        <outlet property="textField1" destination="3Gf-pO-4Lh" id="odd-vX-ZdX"/>
+                        <outlet property="textField2" destination="qiz-Os-z45" id="VNG-A4-PLE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="277" y="207"/>
         </scene>
     </scenes>
 </document>
